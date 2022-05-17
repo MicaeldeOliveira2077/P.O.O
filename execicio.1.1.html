@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1.1</title>
+</head>
+
+<body>
+    <script>
+
+        class Fruits {
+            #name = '';
+            #color = '';
+            #taste = '';
+
+            setName(fruitsNewName) {
+
+                this.#name = fruitsNewName;
+            }
+            setColor(fruitsNewColor) {
+
+                this.#color = fruitsNewColor;
+            }
+            setTaste(fruitsNewTaste) {
+
+                this.#taste = fruitsNewTaste;
+            }
+
+
+            getName() {
+                return this.#name;
+            }
+            getColor() {
+                return this.#color;
+            }
+            getTaste() {
+                return this.#taste;
+            }
+
+        }
+
+        var banana = new Fruits();
+
+        banana.setName('Banana');
+        banana.setColor('Amarela');
+        banana.setTaste('Doce');
+
+        console.log(banana);
+
+        document.write(`Sabor: ${banana.getTaste()}<br>`);      
+        document.write(`Cor: ${banana.getColor()}`);       
+        
+
+    </script>
+
+
+</body>
+
+</html>

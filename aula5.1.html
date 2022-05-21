@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 5.1</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Produto {
+
+            #origem
+            #preco
+            #marca
+            #codigo
+            #descricao
+
+            constructor(codigo, origem) { this.setCodigo(codigo); this.setOrigem(origem) }
+
+            setOrigem(origem) { this.#origem = origem }
+            setPreco(preco) { this.#preco = preco }
+            setMarca(marca) { this.#marca = marca }
+            setCodigo(codigo) { this.#codigo = codigo }
+            setDescricao(descricao) { this.#descricao = descricao }
+
+            getOrigem() { return this.#origem }
+            getPreco() { return this.#preco }
+            getMarca() { return this.#marca }
+            getCodigo() { return this.#codigo }
+            getDescricao() { return this.#descricao }
+
+        }
+
+        class Vestuario extends Produto {
+
+            #tipo
+            #tamanho
+            #cor
+
+            constructor(codigo, tipo) {
+                super(codigo) // Executar o construtor da classe pai                
+                this.setTipo(tipo)
+            }
+
+            setTipo(tipo) { this.#tipo = tipo }
+            setTamanho(tamanho) { this.#tamanho = tamanho }
+            setCor(cor) { this.#cor = cor }
+
+            getTipo() { return this.#tipo }
+            getTamanho() { return this.#tamanho }
+            getCor() { return this.#cor }
+
+        }
+
+        class Alimentos extends Produto {
+
+            #taste
+
+            constructor(codigo, origem, taste) {
+                super(codigo, origem)            
+                this.setTaste(taste)
+            }
+
+            setTaste(taste) { this.#taste = taste }
+            
+
+            getTaste() { return this.#taste }
+           
+        }
+
+        
+
+        class Moveis extends Produto{
+
+            #material
+            
+            constructor(codigo, material) {   
+                super(codigo)            
+                this.setMaterial(material)
+            }
+
+            setMaterial(material) { this.#material = material }
+        
+            getMaterial() { return this.#material }
+
+        }
+
+
+
+        var bone = new Vestuario('B0N3', 'Chapéu')
+
+        var orange = new Alimentos('432423d', 'Alemanha', 'Acid')
+
+        var armario = new Moveis('423423hr', 'Madeira')
+
+        console.log(orange)
+
+    </script>
+
+</body>
+
+</html>
